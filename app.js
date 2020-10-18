@@ -10,6 +10,20 @@ const outputPath = path.join(OUTPUT_DIR, "team.html");
 
 const render = require("./lib/htmlRenderer");
 
+const teamMembers = [];
+
+// create manager's profile --> createManager()
+// inquirer.prompt name, role-id, email, office number
+// .then create manager using manager blueprint
+// const vnaro = new Manager(answers.name, answers.role-id, etc)
+// similar for Intern and Engineer
+// keep asking if want to add another Engineer or Intern
+// render(teamMembers.arr)
+// each time employee is created, push to teamMembers.arr
+// createTeam() --> asks what type of team member do you want to add?
+// switch case if choose Engineer, Intern, or none
+// engineer calls buildEngineer(), intern similar, none buildTeam() 
+
 
 // Write code to use inquirer to gather information about the development team members,
 // and to create objects for each team member (using the correct classes as blueprints!)
