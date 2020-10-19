@@ -11,13 +11,57 @@ const outputPath = path.join(OUTPUT_DIR, "team.html");
 const render = require("./lib/htmlRenderer");
 
 const teamMembers = [];
-const managerQuestions = ["What is your name?", "What is your role?", "What is your email?", "What is your office number?"];
+const managerQuestions = [
+  {
+    type: "input",
+    message: "What is your name?",
+    name: "name"
+  },
+  {
+    type: "input",
+    message: "What is your role?",
+    name: "id"
+  },
+  {
+    type: "input",
+    message: "What is your email?",
+    name: "email"
+  },
+  {
+    type: "input",
+    message: "What is your office number?",
+    name: "office"
+  },
+];
+
+const teamAdd =
+{
+  type: "list",
+  message: "What type of team member would you like to add?",
+  name: "team",
+  choices: ["Engineer", "Intern", "None"]
+}
 
 function createManager() {
   inquirer.prompt(managerQuestions).then(response => {
-    const newManager = new Manager(response)
+    const newManager = new Manager(response.name, response.id, response.email, response.office)
+    newManager.push(teamMembers.arr)
   })
 }
+
+function createTeam() {
+  inquirer.prompt(teamAdd).then(response => {
+    if (response.team === "Engineer") {
+      const newEngineer = new Engineer()
+    } else if (response.team === "Intern") {
+      const newIntern = new Intern()
+    } else if (response.team === "None") {
+
+    }
+  })
+};
+
+
 
 // create manager's profile --> createManager()
 // inquirer.prompt name, role, email, office number
