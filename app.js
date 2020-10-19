@@ -11,11 +11,18 @@ const outputPath = path.join(OUTPUT_DIR, "team.html");
 const render = require("./lib/htmlRenderer");
 
 const teamMembers = [];
+const managerQuestions = ["What is your name?", "What is your role?", "What is your email?", "What is your office number?"];
+
+function createManager() {
+  inquirer.prompt(managerQuestions).then(response => {
+    const newManager = new Manager(response)
+  })
+}
 
 // create manager's profile --> createManager()
-// inquirer.prompt name, role-id, email, office number
+// inquirer.prompt name, role, email, office number
 // .then create manager using manager blueprint
-// const vnaro = new Manager(answers.name, answers.role-id, etc)
+// const whatever = new Manager(answers.name, answers.role, etc)
 // similar for Intern and Engineer
 // keep asking if want to add another Engineer or Intern
 // render(teamMembers.arr)
