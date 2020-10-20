@@ -45,22 +45,22 @@ const managerQuestions = [
 const engineerQuestions = [
   {
     type: "input",
-    message: "What is your name?",
+    message: "What is your engineer's name?",
     name: "name"
   },
   {
     type: "input",
-    message: "What is your ID?",
+    message: "What is your engineer's ID?",
     name: "id"
   },
   {
     type: "input",
-    message: "What is your email?",
+    message: "What is your engineer's email?",
     name: "email"
   },
   {
     type: "input",
-    message: "What is your GitHub username?",
+    message: "What is your engineer's GitHub username?",
     name: "github"
   }
 ];
@@ -69,22 +69,22 @@ const engineerQuestions = [
 const internQuestions = [
   {
     type: "input",
-    message: "What is your name?",
+    message: "What is your intern's name?",
     name: "name"
   },
   {
     type: "input",
-    message: "What is your ID?",
+    message: "What is your intern's ID?",
     name: "id"
   },
   {
     type: "input",
-    message: "What is your email?",
+    message: "What is your intern's email?",
     name: "email"
   },
   {
     type: "input",
-    message: "What is your school?",
+    message: "What is your intern's school?",
     name: "school"
   }
 ];
