@@ -104,7 +104,8 @@ const teamAdd =
 function createManager() {
   inquirer.prompt(managerQuestions).then(response => {
     const newManager = new Manager(response.name, response.id, response.email, response.office)
-    newManager.push(teamMembers.arr)
+    teamMembers.push(newManager)
+    console.log(teamMembers)
     createTeam()
   })
 }
@@ -113,7 +114,8 @@ function createManager() {
 function createEngineer() {
   inquirer.prompt(engineerQuestions).then(response => {
     const newEngineer = new Engineer(response.name, response.id, response.email, response.github)
-    newEngineer.push(teamMembers.arr)
+    teamMembers.push(newEngineer)
+    console.log(teamMembers)
     createTeam()
   })
 };
@@ -122,7 +124,8 @@ function createEngineer() {
 function createIntern() {
   inquirer.prompt(internQuestions).then(response => {
     const newIntern = new Intern(response.name, response.id, response.email, response.school)
-    newIntern.push(teamMembers.arr)
+    teamMembers.push(newIntern)
+    console.log(teamMembers)
     createTeam()
   })
 };
