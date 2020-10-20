@@ -138,14 +138,22 @@ function createTeam() {
     } else if (response.team === "Intern") {
       createIntern();
     } else if (response.team === "None") {
+      // if none, render team members array into file
+      render(teamMembers)
+      fs.writeFile("team.html", teamMembers, function (err) {
+        if (err) {
+          return console.log(err);
+        }
+        console.log("File written!");
 
+      });
     }
   })
 };
 
+
+// Begin building team
 createManager();
-
-
 
 
 
