@@ -139,8 +139,8 @@ function createTeam() {
       createIntern();
     } else if (response.team === "None") {
       // if none, render team members array into file
-      render(teamMembers)
-      fs.writeFile("./output/team.html", teamMembers, function (err) {
+      const finalHTML = render(teamMembers)
+      fs.writeFile("./output/team.html", finalHTML, function (err) {
         if (err) {
           return console.log(err);
         }

@@ -1,0 +1,29 @@
+.jumbotron {
+  background-color: darkblue;
+  color: #fff8a0;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+}
+
+.card {
+  width: 18em;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  margin: 1em;
+}
+
+.card-header {
+  text-align: right;
+}
+
+.fa-mug-hot {
+  color: #dfc700;
+}
+
+.fa-glasses {
+  color: #019ae6;
+}
+
+.fa-user-graduate {
+  color: darkred;
+}
