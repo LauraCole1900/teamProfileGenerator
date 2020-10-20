@@ -11,6 +11,9 @@ const outputPath = path.join(OUTPUT_DIR, "team.html");
 const render = require("./lib/htmlRenderer");
 
 const teamMembers = [];
+
+// Questions arrays
+// Manager
 const managerQuestions = [
   {
     type: "input",
@@ -19,7 +22,7 @@ const managerQuestions = [
   },
   {
     type: "input",
-    message: "What is your role?",
+    message: "What is your ID?",
     name: "id"
   },
   {
@@ -31,9 +34,58 @@ const managerQuestions = [
     type: "input",
     message: "What is your office number?",
     name: "office"
-  },
+  }
 ];
 
+// Engineer
+const engineerQuestions = [
+  {
+    type: "input",
+    message: "What is your name?",
+    name: "name"
+  },
+  {
+    type: "input",
+    message: "What is your ID?",
+    name: "id"
+  },
+  {
+    type: "input",
+    message: "What is your email?",
+    name: "email"
+  },
+  {
+    type: "input",
+    message: "What is your GitHub username?",
+    name: "github"
+  }
+];
+
+// Intern
+const internQuestions = [
+  {
+    type: "input",
+    message: "What is your name?",
+    name: "name"
+  },
+  {
+    type: "input",
+    message: "What is your ID?",
+    name: "id"
+  },
+  {
+    type: "input",
+    message: "What is your email?",
+    name: "email"
+  },
+  {
+    type: "input",
+    message: "What is your school?",
+    name: "school"
+  }
+];
+
+// Add team member?
 const teamAdd =
 {
   type: "list",
@@ -42,12 +94,17 @@ const teamAdd =
   choices: ["Engineer", "Intern", "None"]
 }
 
+
+// Functions
+// Manager
 function createManager() {
   inquirer.prompt(managerQuestions).then(response => {
     const newManager = new Manager(response.name, response.id, response.email, response.office)
     newManager.push(teamMembers.arr)
   })
 }
+
+createManager()
 
 function createTeam() {
   inquirer.prompt(teamAdd).then(response => {
