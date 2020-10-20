@@ -3,7 +3,7 @@
   ## Table of Contents
 
   * [Description](#description)
-  * [Screencaps](#screencaps)
+  * [Screenshots](#screenshots)
   * [Installation](#installation)
   * [Usage](#usage)
   * [Technologies Used](#technologies)
@@ -17,10 +17,13 @@
 
   This is a CLI application using Node.js that generates an html file containing names, roles, IDs, email addresses, an office number (for managers), GitHub account link (for engineers), and school (for interns.) Once in the containing folder, the user, who is assumed to be the manager or team leader, begins by entering "node app.js". They are then taken through a series of prompts eliciting relevant information about their team members. To indicate that they have entered all of the team members, the user selects "None" to answer the question, "What type of team member would you like to add?" The application then synthesizes the information into an html file the user can access from the "output" folder inside their project folder.
 
-  ## Screencaps
+  [Link to walkthrough video](https://drive.google.com/file/d/13uM54miHXwBnXrt7pFscWmgSFilbxihW/view)
 
+  ## Screenshots
+
+  Generated team roster page, viewed through the browser:
+  ![Team roster page](assets/team-roster-screencap.png)
   
-
   ## Installation Instructions
 
   npm i

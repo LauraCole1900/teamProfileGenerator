@@ -105,7 +105,6 @@ function createManager() {
   inquirer.prompt(managerQuestions).then(response => {
     const newManager = new Manager(response.name, response.id, response.email, response.office)
     teamMembers.push(newManager)
-    console.log(teamMembers)
     createTeam()
   })
 }
@@ -115,7 +114,6 @@ function createEngineer() {
   inquirer.prompt(engineerQuestions).then(response => {
     const newEngineer = new Engineer(response.name, response.id, response.email, response.github)
     teamMembers.push(newEngineer)
-    console.log(teamMembers)
     createTeam()
   })
 };
@@ -125,7 +123,6 @@ function createIntern() {
   inquirer.prompt(internQuestions).then(response => {
     const newIntern = new Intern(response.name, response.id, response.email, response.school)
     teamMembers.push(newIntern)
-    console.log(teamMembers)
     createTeam()
   })
 };
