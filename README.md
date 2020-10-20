@@ -22,7 +22,7 @@
   ## Screenshots
 
   Generated team roster page, viewed through the browser:
-  ![Team roster page](assets/team-roster-screencap.png)
+  ![Team roster page](./Assets/team-roster-screencap.png)
   
   ## Installation Instructions
 
