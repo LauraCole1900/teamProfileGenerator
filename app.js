@@ -101,37 +101,48 @@ const teamAdd =
 
 // Functions
 // Manager
-// function createManager() {
-//   inquirer.prompt(managerQuestions).then(response => {
-//     const newManager = new Manager(response.name, response.id, response.email, response.office)
-//     newManager.push(teamMembers.arr)
-//     createTeam()
-//   })
-// }
+function createManager() {
+  inquirer.prompt(managerQuestions).then(response => {
+    const newManager = new Manager(response.name, response.id, response.email, response.office)
+    newManager.push(teamMembers.arr)
+    createTeam()
+  })
+}
 
-// Create team: Engineer, Intern, or none?
+// Engineer
+function createEngineer() {
+  inquirer.prompt(engineerQuestions).then(response => {
+    const newEngineer = new Engineer(response.name, response.id, response.email, response.github)
+    newEngineer.push(teamMembers.arr)
+    createTeam()
+  })
+};
+
+// Intern
+function createIntern() {
+  inquirer.prompt(internQuestions).then(response => {
+    const newIntern = new Intern(response.name, response.id, response.email, response.school)
+    newIntern.push(teamMembers.arr)
+    createTeam()
+  })
+};
+
+// Create team: add Engineer, Intern, or none?
 function createTeam() {
   inquirer.prompt(teamAdd).then(response => {
-    // if (response.team === "Engineer") {
-    //   inquirer.prompt(engineerQuestions).then(response => {
-    //     const newEngineer = new Engineer(response.name, response.id, response.email, response.github)
-    //     newEngineer.push(teamMembers.arr)
-    //     createTeam()
-    //   })
-    if (response.team === "Intern") {
-      inquirer.prompt(internQuestions).then(response => {
-        const newIntern = new Intern(response.name, response.id, response.email, response.school)
-        // newIntern.push(teamMembers.arr)
-        // createTeam()
-        console.log(newIntern)
-      });
-    // } else if (response.team === "None") {
+    if (response.team === "Engineer") {
+      createEngineer();
+    } else if (response.team === "Intern") {
+      createIntern();
+    } else if (response.team === "None") {
 
     }
   })
 };
 
-createTeam()
+createManager();
+
+
 
 
 
