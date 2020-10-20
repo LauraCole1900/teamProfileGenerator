@@ -9,8 +9,12 @@ const OUTPUT_DIR = path.resolve(__dirname, "output");
 const outputPath = path.join(OUTPUT_DIR, "team.html");
 
 const render = require("./lib/htmlRenderer");
+const { POINT_CONVERSION_COMPRESSED } = require("constants");
 
+
+// Team members array
 const teamMembers = [];
+
 
 // Questions arrays
 // Manager
@@ -97,26 +101,37 @@ const teamAdd =
 
 // Functions
 // Manager
-function createManager() {
-  inquirer.prompt(managerQuestions).then(response => {
-    const newManager = new Manager(response.name, response.id, response.email, response.office)
-    newManager.push(teamMembers.arr)
-  })
-}
+// function createManager() {
+//   inquirer.prompt(managerQuestions).then(response => {
+//     const newManager = new Manager(response.name, response.id, response.email, response.office)
+//     newManager.push(teamMembers.arr)
+//     createTeam()
+//   })
+// }
 
-createManager()
-
+// Create team: Engineer, Intern, or none?
 function createTeam() {
   inquirer.prompt(teamAdd).then(response => {
-    if (response.team === "Engineer") {
-      const newEngineer = new Engineer()
-    } else if (response.team === "Intern") {
-      const newIntern = new Intern()
-    } else if (response.team === "None") {
+    // if (response.team === "Engineer") {
+    //   inquirer.prompt(engineerQuestions).then(response => {
+    //     const newEngineer = new Engineer(response.name, response.id, response.email, response.github)
+    //     newEngineer.push(teamMembers.arr)
+    //     createTeam()
+    //   })
+    if (response.team === "Intern") {
+      inquirer.prompt(internQuestions).then(response => {
+        const newIntern = new Intern(response.name, response.id, response.email, response.school)
+        // newIntern.push(teamMembers.arr)
+        // createTeam()
+        console.log(newIntern)
+      });
+    // } else if (response.team === "None") {
 
     }
   })
 };
+
+createTeam()
 
 
 
