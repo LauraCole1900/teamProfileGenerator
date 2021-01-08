@@ -42,7 +42,7 @@
 
   ## Credits
 
-  N/A
+  Front-end code was provided by Trilogy Education Services.
 
   ## Contributing
 
