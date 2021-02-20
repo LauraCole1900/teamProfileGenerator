@@ -38,7 +38,7 @@ SSH:
 $ git clone git@github.com:LauraCole1900/teamProfileGenerator.git
 ```
 
-Then cd into the cloned directory and download the dependencies into the cloned directory by entering into the command line:
+Then cd/ into the cloned directory and download the dependencies into the cloned directory by entering into the command line:
 ```
 $ npm install --save
 ```
