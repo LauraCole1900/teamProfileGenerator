@@ -62,7 +62,7 @@ npm run test
 
 ## Credits
 
-Base code developed and provided by 2U/Trilogy Education Services
+Front-end code developed and provided by 2U/Trilogy Education Services
 
 ## Contributing
 
