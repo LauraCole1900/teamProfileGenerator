@@ -4,9 +4,9 @@
 
 * [Description](#description)
 * [Screenshots](#screenshots)
-* [Installation](#installation)
+* [Installation Instructions](#installation-instructions)
 * [Usage](#usage)
-* [Technologies Used](#technologies)
+* [Technologies Used](#technologies-used)
 * [Tests](#tests)
 * [Credits](#credits)
 * [Contributing](#contributing)
