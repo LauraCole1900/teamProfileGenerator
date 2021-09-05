@@ -3,6 +3,7 @@
 ## Table of Contents
 
 * [Description](#description)
+* [Links](#links)
 * [Screenshots](#screenshots)
 * [Installation Instructions](#installation-instructions)
 * [Usage](#usage)
@@ -16,6 +17,8 @@
 ## Description
 
 This is a CLI application using Node.js that generates an html file containing names, roles, IDs, email addresses, an office number (for managers), GitHub account link (for engineers), and school (for interns.) The user should begin by creating an 'output' folder in the folder containing the application, then opening said containing folder in the terminal. Once in the containing folder in the terminal, the user, who is assumed to be the manager or team leader, begins by entering "node app.js". They are then taken through a series of prompts eliciting relevant information about their team members. To indicate that they have entered all of the team members, the user selects "None" to answer the question, "What type of team member would you like to add?" The application then synthesizes the information into an html file the user can access from the "output" folder inside their project folder.
+
+## Links
 
 [Link to walkthrough video](https://drive.google.com/file/d/14Y77zksXcUSfyXXI9gjCWBtUWVf3rcxJ/view)
 
