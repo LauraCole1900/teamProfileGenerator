@@ -1,28 +1,40 @@
+:root {
+  --myFont: 'Poppins', sans-serif;
+  --ltGray: #dddddd;
+  --dkGray: #a9a9a9;
+  --dkRed: #8b0000;
+  --ltYellow: #fff8a0;
+  --dkYellow: #dfc700;
+  --ltGreen: #c5ffce;
+  --dkGreen: #00560d;
+  --blue: #019ae6;
+}
+
 .jumbotron {
-  background-color: #00560d;
+  background-color: var(--dkGreen);
   background-image: url("./jack-o-lantern-nebula.jpg");
-  color: #fff8a0;
-  font-family: 'Poppins', sans-serif;
+  color: var(--ltYellow);
+  font-family: var(--myFont);
   font-weight: 800;
   /* Image of jack-o-lantern nebula from http://www.spitzer.caltech.edu/images/6697-ssc2019-17a-The-Jack-o-Lantern-Nebula */
 }
 
 body {
-  background-color: #c5ffce;
+  background-color: var(--ltGreen);
 }
 
 .card {
   min-width: 30%;
-  font-family: 'Poppins', sans-serif;
+  font-family: var(--myFont);
   font-weight: 400;
   margin: 0.5em;
-  border: 1px solid darkgray;
+  border: 1px solid var(--dkGray);
   box-shadow: 3px 3px 5px;
 }
 
 .card-header {
   text-align: right;
-  background-color: #dddddd;
+  background-color: var(--ltGray);
 }
 
 .card-body {
@@ -30,13 +42,13 @@ body {
 }
 
 .fa-mug-hot {
-  color: #dfc700;
+  color: var(--dkYellow);
 }
 
 .fa-glasses {
-  color: #019ae6;
+  color: var(--blue);
 }
 
 .fa-user-graduate {
-  color: darkred;
+  color: var(--dkRed);
 }
