@@ -46,9 +46,9 @@ body {
 }
 
 .fa-glasses {
-  color: var(--blue);
+  color: var(--dkRed);
 }
 
 .fa-user-graduate {
-  color: var(--dkRed);
+  color: var(--blue);
 }
