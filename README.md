@@ -57,7 +57,7 @@ This project is intended to be used to generate a roster-page for a team of deve
 
 ## Technologies Used
 
-Node.js, Inquirer, Jest
+[![Node.js](https://img.shields.io/badge/built%20with-Node.js-3c873a)](https://nodejs.org/en/) [![Inquirer.js](https://img.shields.io/badge/built%20with-Inquirer.js-68a063)](https://www.npmjs.com/package/inquirer) [![Jest](https://img.shields.io/badge/built%20with-Jest-6ec532)](https://jestjs.io/)
 
 ## Tests
 
